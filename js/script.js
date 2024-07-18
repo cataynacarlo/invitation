@@ -26,7 +26,8 @@ $(document).on('click', function(){
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 29, 2024 00:00:00").getTime();
+var countDownDate = new Date("July 21, 2024 00:00:00").getTime();
+console.log(countDownDate)
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -49,7 +50,7 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("time").innerHTML = "Bless the married couple for happy life!";
+        document.getElementById("time").innerHTML = "Happy 3rd Anniversary, my Dara Maria!";
     }
 }, 1000);
 
@@ -85,9 +86,9 @@ var styles2 = [
     , 'font-size: 32px'
 ].join(';');
 
-console.log('\n\n%c SAVE THE DATE: 29th Nov, 2020!', styles);
+console.log('\n\n%c SAVE THE DATE: 21st July, 2024!', styles);
 
-console.log('%cYour presence is requested!%c\n\nRegards: Vinit Shahdeo', styles1, styles2);
+console.log('%c', styles1, styles2);
 
 console.log(
     `%cShaadi me zaroor aana!\n\n`,
