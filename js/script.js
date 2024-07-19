@@ -142,3 +142,7 @@ function showSlides() {
 }
 
 showSlides();
+
+window.onload = function() {
+    document.body.classList.add('loaded');
+};
