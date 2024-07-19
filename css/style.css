@@ -517,19 +517,19 @@ body {
 }
 
 .days {
-	background: linear-gradient(90deg, #b33a46, #9b313c);
+    background: linear-gradient(90deg, #6bf0ff, #4a9bce); /* Light blue gradient */
 }
 
 .hours {
-	background: linear-gradient(90deg, #a7c3cd, #90a9b2);
+    background: linear-gradient(90deg, #a0d9e8, #6bf0ff); /* Light blue to main blue gradient */
 }
 
 .minutes {
-	background-color: #874562;
+    background-color: #4a9bce; /* Complementary blue shade */
 }
 
 .seconds {
-	background-color: #145689;
+    background-color: #6994e4; /* Darker blue for contrast */
 }
 
 .date {
@@ -600,3 +600,319 @@ a {
 	filter: blur(0.1vmin);
 	background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px), linear-gradient(90deg, #00fffa, #f0f0f0);
   }
+
+button {
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    margin-right: 10px;
+}
+
+#trainButton {
+    left: 150px;
+}
+
+.image-container {
+    position: fixed;
+    transition: all 0.5s ease;
+	z-index: 9999;
+}
+
+.image-container img {
+    width: 200px; /* Image width */
+    height: 200px; /* Image height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-container.top {
+    top: -220px; /* Adjusted for the larger image size */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container.right {
+    top: 50%;
+    right: -220px; /* Adjusted for the larger image size */
+    transform: translateY(-50%);
+}
+
+.image-container.bottom {
+    bottom: -220px; /* Adjusted for the larger image size */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container.left {
+    top: 50%;
+    left: -220px; /* Adjusted for the larger image size */
+    transform: translateY(-50%);
+}
+
+.image-container.top-more {
+    top: -220px; /* Adjusted for the larger image size */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container.right-more {
+    top: 50%;
+    right: -220px; /* Adjusted for the larger image size */
+    transform: translateY(-50%);
+}
+
+.image-container.bottom-more {
+    bottom: -220px; /* Adjusted for the larger image size */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container.show.top,
+.image-container.show.top-more {
+    top: 20px;
+}
+
+.image-container.show.right,
+.image-container.show.right-more {
+    right: 20px;
+}
+
+.image-container.show.bottom,
+.image-container.show.bottom-more {
+    bottom: 20px;
+}
+
+.image-container.show.left {
+    left: 20px;
+}
+
+.image-container.more {
+    transition: all 0.5s ease;
+}
+
+
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#container1{
+    display: flex;
+    flex-wrap: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
+    background-color: #1F2937;
+    background-color: #ffe7e7;
+    margin: 0;
+}
+
+#container1 div{
+    padding: 5px;
+}
+
+#description{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#description h1{
+    font-size: 48px;
+    font-style: extra-bold;
+    color: #f9faf8;
+    margin-bottom: 0;
+}
+#description p{
+    margin-top: 1px;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+#description h4{
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #3882F6;
+    color: #f9faf8;
+    justify-content: center;
+    text-align: center;
+}
+
+#description h4:hover{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #f9faf8;
+    background-color: #0956d1;
+
+}
+
+.food{
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+	flex: 1;
+	max-width: 300px; /* Adjust based on your layout */
+}
+
+.food a{
+    color: rgb(255, 0, 0);
+}
+
+.food:hover {
+    animation: borderGlow 2s infinite; /* Apply the borderGlow animation */
+    box-shadow: 0 0 10px rgba(34, 204, 216, 0.6); /* Optional: add a subtle shadow effect */
+}
+
+html {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+a:visited{
+    text-decoration: none;
+    
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes foodEnlarge {
+    50%{transform: scale(1.2,1.2);}
+}
+
+div{
+    margin: 1px;
+}
+
+#container2{
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageclass{
+    background-color: rgb(255, 49, 66);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#monthsary{
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #ffe7e7;
+    background-color: #ffffff;
+    margin:0;
+}
+
+#monthsary h1{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 9em;
+    font-family: 'Allura', cursive;
+    color: rgb(255, 0, 0);
+    animation: textGlow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes textGlow {
+    50%{
+        text-shadow: 5px 10px 10px rgb(18, 255, 223);
+    };
+}
+
+@keyframes boxGlow {
+    50%{
+        box-shadow: 5px 10px 10px rgb(18, 255, 223);
+    };
+}
+
+@keyframes borderGlow {
+    0% {
+        border-color: rgba(30, 195, 224, 0.5); /* Initial glow */
+    }
+    50% {
+        border-color: rgba(77, 179, 197, 0.5); /* Full glow */
+    }
+    100% {
+        border-color: rgba(30, 195, 224, 0.5); /* Fade out */
+    }
+}
+
+.slide-container {
+    position: relative;
+    max-width: 100%;
+	height: 350px; /* Fixed height for slides */
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 300px; /* Ensure image covers the width of the container */
+    height: 350px; /* Ensure image covers the height of the container */
+    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Remove default button styling */
+#bcontain button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Set button size and alignment */
+#bcontain {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style images within buttons */
+#bcontain img {
+    height: 150px;
+    width: 150px;
+}

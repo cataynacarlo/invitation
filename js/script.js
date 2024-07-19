@@ -94,3 +94,51 @@ console.log(
     `%cShaadi me zaroor aana!\n\n`,
     'color: yellow; background:tomato; font-size: 24pt; font-weight: bold',
 )
+
+document.getElementById('toggleButton').addEventListener('click', function() {
+    const imageContainers = document.querySelectorAll('.image-container:not(.more)');
+    imageContainers.forEach(container => container.classList.add('show'));
+    
+    setTimeout(() => {
+        imageContainers.forEach(container => container.classList.remove('show'));
+    }, 2000); // Show for 2 seconds before hiding
+});
+
+document.getElementById('trainButton').addEventListener('click', function() {
+    const imageContainersMore = document.querySelectorAll('.more');
+    imageContainersMore.forEach(container => container.classList.add('show'));
+    
+    setTimeout(() => {
+        imageContainersMore.forEach(container => container.classList.remove('show'));
+    }, 2000); // Show for 2 seconds before hiding
+});
+
+
+
+let slideIndexes = [0, 0, 0]; // Array to keep track of slide indexes for each .food element
+
+function showSlides() {
+    let containers = document.querySelectorAll('.food .slide-container');
+
+    containers.forEach((container, index) => {
+        let slides = container.getElementsByClassName('slide');
+        let slideIndex = slideIndexes[index];
+        
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';  
+        }
+        
+        // Show the current slide
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}  
+        slides[slideIndex-1].style.display = 'block';  
+        
+        // Save the current slide index
+        slideIndexes[index] = slideIndex;
+    });
+
+    setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+
+showSlides();
